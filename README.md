@@ -87,9 +87,9 @@ python app.py
 ## API Documentation
 ### 1. Predict Salary
 
-    **URL:** /predict
-    **Method:** POST
-    **Format:** JSON
+**URL:** /predict
+**Method:** POST
+**Format:** JSON
 
 *Sample Request:*
 ```json{
