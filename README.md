@@ -65,21 +65,24 @@ scikit-learn
 joblib):
 
 ```bash
-pip install pandas numpy scikit-learn flask```
+pip install pandas numpy scikit-learn flask
+```
 
 ### Step 1: Train the Model
 
 Run the ETL and training pipeline. The script automatically selects the best model based on the F1-Score and saves it as best_model_pipeline.pkl.
 
 ```bash
-python train_model.py```
+python train_model.py
+```
 
 ### Step 2: Start the API Server
 
 Launch the Flask application. The predictions.db database will be initialized automatically upon the first run.
 
 ```bash
-python app.py```
+python app.py
+```
 
 ## API Documentation
 ### 1. Predict Salary
@@ -99,7 +102,8 @@ python app.py```
     "remote_ratio": 0,
     "company_location": "US",
     "company_size": "M"
-}```
+}
+```
 
 *Sample Response:*
 
@@ -107,4 +111,5 @@ python app.py```
     "label": "High Salary (>140k USD)",
     "prediction": 1,
     "probability": 0.85
-}```
+}
+```
