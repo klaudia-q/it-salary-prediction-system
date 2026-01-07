@@ -62,3 +62,45 @@ A lightweight database storing logs: `timestamp`, `input features`, `prediction 
 
 ```bash
 pip install pandas numpy scikit-learn flask
+
+Step 1: Train the Model
+
+Run the ETL and training pipeline. The script automatically selects the best model based on the F1-Score and saves it as best_model_pipeline.pkl.
+
+python train_model.py
+
+Step 2: Start the API Server
+
+Launch the Flask application. The predictions.db database will be initialized automatically upon the first run.
+
+python app.py
+
+API Documentation
+1. Predict Salary
+
+    URL: /predict
+
+    Method: POST
+
+    Format: JSON
+
+Sample Request:
+{
+    "work_year": 2024,
+    "experience_level": "SE",
+    "employment_type": "FT",
+    "job_title": "Machine Learning Engineer",
+    "salary_currency": "USD",
+    "employee_residence": "US",
+    "remote_ratio": 0,
+    "company_location": "US",
+    "company_size": "M"
+}
+
+Sample Response:
+
+{
+    "label": "High Salary (>140k USD)",
+    "prediction": 1,
+    "probability": 0.85
+}
