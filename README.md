@@ -58,21 +58,27 @@ A lightweight database storing logs: `timestamp`, `input features`, `prediction 
 
 ### Prerequisites
 * Python 3.8+
-* Install dependencies (recommend creating a `requirements.txt`):
+* Install dependencies (flask
+pandas
+numpy
+scikit-learn
+joblib):
 
 ```bash
 pip install pandas numpy scikit-learn flask
 
-Step 1: Train the Model
+###Step 1: Train the Model
 
 Run the ETL and training pipeline. The script automatically selects the best model based on the F1-Score and saves it as best_model_pipeline.pkl.
 
+```bash
 python train_model.py
 
-Step 2: Start the API Server
+###Step 2: Start the API Server
 
 Launch the Flask application. The predictions.db database will be initialized automatically upon the first run.
 
+```bash
 python app.py
 
 API Documentation
