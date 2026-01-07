@@ -1,6 +1,3 @@
-# it-salary-prediction-system
-End-to-End Machine Learning Microservice for IT Salary Classification. Built with Flask, Scikit-learn &amp; SQLite. 
-
 # IT Salary Prediction System: End-to-End Machine Learning Solution
 
 ## 📋 Project Overview
@@ -62,51 +59,6 @@ A lightweight database storing logs: `timestamp`, `input features`, `prediction 
 ### Prerequisites
 * Python 3.8+
 * Install dependencies (recommend creating a `requirements.txt`):
-  ```bash
-  pip install pandas numpy scikit-learn flask
-
-  Step 1: Train the Model
-
-Run the ETL and training pipeline. The script automatically selects the best model based on the F1-Score and saves it as best_model_pipeline.pkl.
 
 ```bash
-python train_model.py
-
-Step 2: Start the API Server
-
-Launch the Flask application. The predictions.db database will be initialized automatically upon the first run.
-
-```bash
-python app.py
-
-API Documentation
-1. Predict Salary
-
-URL: /predict Method: POST Format: JSON
-
-Sample Request:
-
-{
-    "work_year": 2024,
-    "experience_level": "SE",
-    "employment_type": "FT",
-    "job_title": "Machine Learning Engineer",
-    "salary_currency": "USD",
-    "employee_residence": "US",
-    "remote_ratio": 0,
-    "company_location": "US",
-    "company_size": "M"
-}
-
-Sample Response:
-
-{
-    "label": "Wysokie zarobki (>140k USD)",
-    "prediction": 1,
-    "probability": 0.85
-}
-2. Query History
-
-URL: /history Method: GET
-
-Returns a list of recent queries and results, enabling Model Drift monitoring and usage analysis.
+pip install pandas numpy scikit-learn flask
