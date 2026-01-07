@@ -3,7 +3,7 @@
 ## 📋 Project Overview
 **IT Salary Prediction System** is a complete *End-to-End Machine Learning* solution designed to automate the process of salary estimation in the technology sector.
 
-This project is not just a standalone analysis notebook—it is a fully functional **Microservice** that:
+This project is not just a standalone analysis notebook - it is a fully functional **Microservice** that:
 1. Processes raw historical data (ETL).
 2. Trains and evaluates multiple classification algorithms.
 3. Deploys the best-performing model via a **REST API**.
