@@ -19,7 +19,7 @@ def load_and_preprocess(file_path):
     except FileNotFoundError:
         return pd.DataFrame()
 
-    # Feature Engineering (z Twojego kodu)
+    # Feature Engineering 
     df.dropna(subset=['salary_in_usd'], inplace=True)
     df = df.drop_duplicates()
     
@@ -120,4 +120,5 @@ def main():
     print(f"Zapisano najlepszy model do pliku: {MODEL_PATH}")
 
 if __name__ == "__main__":
+
     main()
